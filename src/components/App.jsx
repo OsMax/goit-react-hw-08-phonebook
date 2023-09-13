@@ -1,32 +1,24 @@
 // import { useState, useEffect } from 'react';
-import ContactForm from './ContactForm';
-import Filter from './Filter';
-import ContactList from './ContactList/ContactList';
-import Loader from './Loader/Loader';
+import { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchPhones } from 'redux/operations';
-import { selectError, selectIsLoading } from 'redux/selectors';
+import { Navigation } from './Navigation/Navigation';
+// import Loader from './Loader/Loader';
+
+const Register = lazy(() => import('pages/Register/Register'));
+const Login = lazy(() => import('pages/Login/Login'));
+const Contacts = lazy(() => import('pages/Contacts/Contacts'));
 
 function App() {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchPhones());
-  }, [dispatch]);
-
   return (
-    <div className="appContainer">
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      {isLoading && !error && <Loader />}
-      <ContactList />
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        {/* <Route index element={<Home />}></Route> */}
+        <Route path="register" element={<Register />}></Route>
+        <Route path="login" element={<Login />}></Route>
+        <Route path="contacts" element={<Contacts />}></Route>
+      </Route>
+    </Routes>
   );
 }
 
