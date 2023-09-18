@@ -12,6 +12,8 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { authReducer } from './auth/authSlice';
+import { phonesReducer } from './phone/phonesSlice';
+import { findReducer } from './phone/findSlice';
 
 const persistConfig = {
   key: 'root',
@@ -23,6 +25,8 @@ const persistRed = persistReducer(persistConfig, authReducer);
 export const store = configureStore({
   reducer: {
     auth: persistRed,
+    phones: phonesReducer,
+    filter: findReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

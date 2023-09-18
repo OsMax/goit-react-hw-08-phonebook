@@ -11,12 +11,12 @@ const Register = lazy(() => import('pages/Register/Register'));
 const Login = lazy(() => import('pages/Login/Login'));
 const Contacts = lazy(() => import('pages/Contacts/Contacts'));
 
-function App() {
-  const dispatch = useDispatch;
+const App = () => {
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(current());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(current());
+  }, [dispatch]);
 
   return (
     <Routes>
@@ -28,6 +28,6 @@ function App() {
       </Route>
     </Routes>
   );
-}
+};
 
 export default App;
