@@ -1,7 +1,6 @@
 import React from 'react';
 import css from './Filter.module.css';
 import { setFilter } from 'redux/phone/findSlice';
-import { selectFilter } from 'redux/phone/selectors';
 
 import { useDispatch } from 'react-redux';
 
