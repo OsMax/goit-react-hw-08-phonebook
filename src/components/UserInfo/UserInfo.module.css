@@ -13,9 +13,11 @@
   font-weight: 700;
   border: 2px solid #8e945e;
   box-shadow: 5px 3px 10px #8e945e;
+  background-color: #dde794;
 }
 
 .userOut:hover {
   background-color: #7c8253;
   color: #dde794;
+  cursor: pointer;
 }
