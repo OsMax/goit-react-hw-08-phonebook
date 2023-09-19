@@ -1,10 +1,11 @@
 // import { useState, useEffect } from 'react';
 import { SingUpForm } from 'components/SingUpForm/SingUpForm';
+import css from './Register.module.css';
 
 const Register = () => {
   return (
-    <div>
-      <h2>LogUp</h2>
+    <div className={css.regCont}>
+      <h2 className={css.regTitle}>LogUp</h2>
       <SingUpForm />
     </div>
   );

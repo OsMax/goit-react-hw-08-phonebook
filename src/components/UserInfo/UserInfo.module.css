@@ -1,0 +1,21 @@
+.userCont {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.userOut {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid #8e945e;
+  box-shadow: 5px 3px 10px #8e945e;
+}
+
+.userOut:hover {
+  background-color: #7c8253;
+  color: #dde794;
+}

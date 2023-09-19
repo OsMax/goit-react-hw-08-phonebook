@@ -30,20 +30,16 @@ export const Navigation = () => {
               </li>
             </ul>
           )}
-          {isLogIn && (
-            <NavLink className={css.navLink} to="/contacts">
-              Contacts
-            </NavLink>
-          )}
+
           {isLogIn && <UserInfo user={user} />}
         </div>
       </header>
       <main>
-        <div>
+        <>
           <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
-        </div>
+        </>
       </main>
     </>
   );

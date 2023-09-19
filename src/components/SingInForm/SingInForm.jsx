@@ -32,9 +32,19 @@ export const SingInForm = () => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <input type="email" name="email" onChange={handleChange} />
-      <input type="password" name="password" onChange={handleChange} />
-      <button type="submit">submit</button>
+      <input
+        type="email"
+        name="email"
+        onChange={handleChange}
+        placeholder="email"
+      />
+      <input
+        type="password"
+        name="password"
+        onChange={handleChange}
+        placeholder="password"
+      />
+      <button type="submit">Sing In</button>
     </form>
   );
 };

@@ -1,10 +1,11 @@
 // import { useState, useEffect } from 'react';
 import { SingInForm } from 'components/SingInForm/SingInForm';
+import css from './Login.module.css';
 
 const Login = () => {
   return (
-    <div>
-      <h2>LogIn</h2>
+    <div className={css.logCont}>
+      <h2 className={css.logTitle}>LogIn</h2>
       <SingInForm />
     </div>
   );

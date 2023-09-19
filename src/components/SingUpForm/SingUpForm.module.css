@@ -4,4 +4,24 @@
   width: 95%;
   max-width: 300px;
   margin: 0 auto;
+  gap: 4px;
+}
+
+.form button,
+.form input {
+  margin: 0;
+  padding: 0 8px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #8e945e;
+  box-shadow: 5px 3px 10px #8e945e;
+}
+
+.form button {
+  background-color: #dde794;
+}
+.form button:hover {
+  background-color: #7c8253;
+  color: #dde794;
 }
